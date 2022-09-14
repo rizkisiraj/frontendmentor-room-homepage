@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'Spartan', sans-serif;
+}
+
+body.locked {
+  overflow: hidden;
+}
+
+body.locked .modal {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  z-index: 9999;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal nav {
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal nav button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.modal nav ul {
+  list-style: none;
+}
+
+.modal nav ul li {
+  display: inline-block;
+  margin-right: .8rem;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  padding: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 931px) {
+  .navigation .logo {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    text-align: center;
+  }
+  .navigation .hamburger {
+    display: block;
+  }
+  .navigation ul {
+    display: none;
+  }
+}
+
+.navigation .hamburger {
+  background-color: transparent;
+  display: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 931px) {
+  .navigation .hamburger {
+    display: block;
+  }
+}
+
+.navigation .logo {
+  color: white;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-right: 2rem;
+}
+
+.navigation ul {
+  list-style: none;
+  display: block;
+}
+
+@media screen and (max-width: 931px) {
+  .navigation ul {
+    display: none;
+  }
+}
+
+.navigation ul li {
+  display: inline-block;
+  text-transform: lowercase;
+  color: white;
+  font-size: 14px;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .hero-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 930px) {
+  main .hero-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .hero-section .photo-wrapper {
+    width: 100%;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  main .hero-section .hero-text {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+}
+
+main .hero-section .photo-wrapper {
+  position: relative;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  height: 500px;
+}
+
+main .hero-section .photo-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .hero-section .hero-text {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  padding: 4rem;
+  position: relative;
+}
+
+@media screen and (max-width: 1100px) {
+  main .hero-section .hero-text {
+    padding: 2rem;
+  }
+  main .hero-section .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 963px) {
+  main .hero-section .hero-text h1 {
+    font-size: 5rem;
+  }
+}
+
+main .hero-section .hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+main .hero-section .hero-text p {
+  color: #a1a1a1;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+  margin-bottom: 2rem;
+}
+
+main .hero-section .hero-text a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .8rem;
+  color: black;
+  font-weight: 500;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+main .hero-section .hero-text a:hover {
+  color: #a1a1a1;
+}
+
+main .hero-section .hero-text .control {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 930px) {
+  main .hero-section .hero-text .control {
+    bottom: 100%;
+    right: 0;
+    left: auto;
+  }
+}
+
+main .hero-section .hero-text .control button {
+  background-color: black;
+  padding: 1rem 1.5rem;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+  border: none;
+  cursor: pointer;
+}
+
+main .hero-section .hero-text .control button:hover {
+  background-color: #454545;
+}
+
+main .about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+@media screen and (max-width: 930px) {
+  main .about-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .about-section .about-photo-wrapper {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+main .about-section .about-text {
+  width: 100%;
+  max-width: 700px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  padding: 3rem;
+}
+
+@media screen and (max-width: 930px) {
+  main .about-section .about-text {
+    padding: 1.6rem;
+  }
+}
+
+main .about-section .about-text h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main .about-section .about-text p {
+  color: #a1a1a1;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+  margin-bottom: 2rem;
+}
+
+main .about-section img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.attribution {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  background-color: #678bda;
+}
+/*# sourceMappingURL=styles.css.map */
